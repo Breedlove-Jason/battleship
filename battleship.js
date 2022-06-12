@@ -12,12 +12,15 @@ let view = {
     cell.setAttribute("class", "miss");
   },
 };
-// test data
-view.displayMiss("00");
-view.displayHit("34");
-view.displayMiss("55");
-view.displayHit("12");
-view.displayMiss("25");
-view.displayHit("26");
 
-view.displayMessage("Turn number: ");
+const model = {
+  boardSize: 7,
+  numShips: 3,
+  shipLength: 3,
+  shipsSunk: 0,
+  ships: [
+    { location: [10, 20, 30], hits: ["", "", ""] },
+    { location: [32, 33, 34], hits: ["", "", ""] },
+    { location: [63, 64, 65], hits: ["", "", ""] },
+  ],
+};
